@@ -1,0 +1,509 @@
+{
+  "baseUrl": "http://localhost:8088",
+  "format": "1",
+  "outDir": "screenshot",
+  "targets": [
+    {
+      "module": "01-Public",
+      "name": "Halaman Utama & Eksplor Lelang",
+      "route": "/",
+      "role": "Public",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "unauth_guest",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": ".navbar-brand-silelo"
+    },
+    {
+      "module": "01-Public",
+      "name": "Katalog Kategori: Gadget & Elektronik",
+      "route": "/home/kategori/elektronik",
+      "role": "Public",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "unauth_guest",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "01-Public",
+      "name": "Detail Produk Lelang Terkurasi",
+      "route": "/home/produk/elektronik/1",
+      "role": "Public",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "unauth_guest",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "01-Public",
+      "name": "Panduan Cara Lelang & Bidding",
+      "route": "/home/about",
+      "role": "Public",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "unauth_guest",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "01-Public",
+      "name": "Pusat Bantuan & Layanan Kontak",
+      "route": "/home/kontak",
+      "role": "Public",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "unauth_guest",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "01-Public",
+      "name": "Layar Autentikasi Bidder",
+      "route": "/home/register",
+      "isOverlay": true,
+      "role": "Public",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "unauth_guest",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "02-Bidder-Portal",
+      "name": "Menu: Akun & Profil Bidder",
+      "route": "/profile",
+      "role": "Bidder",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "hcjlviko8iokcaua7t9jpkvj7gaennra",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "#customer-account"
+    },
+    {
+      "module": "02-Bidder-Portal",
+      "name": "Aksi: Modal Top Up Deposit Jaminan",
+      "route": "/profile",
+      "clickSelector": "button[data-target='#deposit-modal']",
+      "isOverlay": true,
+      "role": "Bidder",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "hcjlviko8iokcaua7t9jpkvj7gaennra",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "02-Bidder-Portal",
+      "name": "Menu: Preferensi Kategori Minat",
+      "route": "/profile/rekomendasi",
+      "role": "Bidder",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "hcjlviko8iokcaua7t9jpkvj7gaennra",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "02-Bidder-Portal",
+      "name": "Menu: Riwayat Tawaran Lelang",
+      "route": "/profile/orders",
+      "role": "Bidder",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "hcjlviko8iokcaua7t9jpkvj7gaennra",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "02-Bidder-Portal",
+      "name": "Menu: Tagihan & Pembayaran Lelang",
+      "route": "/profile/payment",
+      "role": "Bidder",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "hcjlviko8iokcaua7t9jpkvj7gaennra",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "03-Pelelang-Portal",
+      "name": "Layar Login Portal Pelelang",
+      "route": "/dashboard",
+      "isOverlay": true,
+      "role": "Pelelang",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "unauth_guest",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "03-Pelelang-Portal",
+      "name": "Layar Registrasi Pelelang Baru",
+      "route": "/dashboard/daftar",
+      "isOverlay": true,
+      "role": "Pelelang",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "unauth_guest",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "03-Pelelang-Portal",
+      "name": "Menu: Dashboard Pelelang",
+      "route": "/dashboard",
+      "role": "Pelelang",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "lsa19ovt05m9kvg9f1jsnob569mi07os",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": ".main-sidebar"
+    },
+    {
+      "module": "03-Pelelang-Portal",
+      "name": "Menu: Manajemen Data Barang Lelang",
+      "route": "/back_end/barang",
+      "role": "Pelelang",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "lsa19ovt05m9kvg9f1jsnob569mi07os",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "table"
+    },
+    {
+      "module": "03-Pelelang-Portal",
+      "name": "Aksi: Formulir Tambah Produk Lelang",
+      "route": "/back_end/barang/add_produk",
+      "role": "Pelelang",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "lsa19ovt05m9kvg9f1jsnob569mi07os",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "03-Pelelang-Portal",
+      "name": "Menu: Data Transaksi Lelang",
+      "route": "/back_end/transaksi",
+      "role": "Pelelang",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "lsa19ovt05m9kvg9f1jsnob569mi07os",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "table"
+    },
+    {
+      "module": "03-Pelelang-Portal",
+      "name": "Menu: Data Invoice Penjualan",
+      "route": "/back_end/transaksi/invoice",
+      "role": "Pelelang",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "lsa19ovt05m9kvg9f1jsnob569mi07os",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "table"
+    },
+    {
+      "module": "03-Pelelang-Portal",
+      "name": "Menu: Profil Toko Pelelang",
+      "route": "/dashboard/profile_pelelang",
+      "role": "Pelelang",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "lsa19ovt05m9kvg9f1jsnob569mi07os",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Layar Login Administrator",
+      "route": "/dashboard/admin",
+      "isOverlay": true,
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "unauth_guest",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Menu: Ringkasan Dashboard Administrator",
+      "route": "/dashboard",
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "nqohu559ki5f64dac3dgb4k8jdk6mhc0",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": ".main-sidebar"
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Menu: Manajemen Data Admin Sistem",
+      "route": "/back_end/admin",
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "nqohu559ki5f64dac3dgb4k8jdk6mhc0",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "#mytable"
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Aksi: Modal Tambah Admin Baru",
+      "route": "/back_end/admin",
+      "clickSelector": "button:has-text('Admin')",
+      "isOverlay": true,
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "nqohu559ki5f64dac3dgb4k8jdk6mhc0",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Menu: Direktori Data Pelelang Aktif",
+      "route": "/back_end/users/pelelang_aktif",
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "nqohu559ki5f64dac3dgb4k8jdk6mhc0",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "table"
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Menu: Verifikasi Pendaftaran Pelelang Baru",
+      "route": "/back_end/users/pelelang_baru",
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "nqohu559ki5f64dac3dgb4k8jdk6mhc0",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "table"
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Menu: Manajemen Produk Lelang Aktif",
+      "route": "/back_end/barang/admin_aktif",
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "nqohu559ki5f64dac3dgb4k8jdk6mhc0",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "table"
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Menu: Riwayat Produk Lelang Terjual",
+      "route": "/back_end/barang/admin_laku",
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "nqohu559ki5f64dac3dgb4k8jdk6mhc0",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "table"
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Menu: Verifikasi & Data Deposit Jaminan",
+      "route": "/back_end/deposit",
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "nqohu559ki5f64dac3dgb4k8jdk6mhc0",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "table"
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Menu: Manajemen Data Invoice Pemenang",
+      "route": "/back_end/deposit/invoice",
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "nqohu559ki5f64dac3dgb4k8jdk6mhc0",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "table"
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Menu: Ulasan & Reputasi Pelanggan",
+      "route": "/back_end/users/review",
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "nqohu559ki5f64dac3dgb4k8jdk6mhc0",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "table"
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Menu: Direktori Data Bidder Aktif",
+      "route": "/back_end/users/bidder_aktif",
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "nqohu559ki5f64dac3dgb4k8jdk6mhc0",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "table"
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Menu: Analitik Minat Kategori Bidder",
+      "route": "/back_end/users/kategori_klik",
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "nqohu559ki5f64dac3dgb4k8jdk6mhc0",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "table"
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Menu: Analitik Bidding Kategori",
+      "route": "/back_end/users/kategori_bid",
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "nqohu559ki5f64dac3dgb4k8jdk6mhc0",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ],
+      "waitForSelector": "table"
+    },
+    {
+      "module": "04-Admin-Panel",
+      "name": "Menu: Profil Administrator Sistem",
+      "route": "/dashboard/profile_administrator",
+      "role": "Admin",
+      "cookies": [
+        {
+          "name": "ci_session",
+          "value": "nqohu559ki5f64dac3dgb4k8jdk6mhc0",
+          "domain": "localhost",
+          "path": "/"
+        }
+      ]
+    }
+  ]
+}
